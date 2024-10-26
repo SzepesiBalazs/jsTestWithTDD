@@ -1,0 +1,4 @@
+cell.isAlive === true && cell.neighbors.length < 2
+cell.isAlive === true && cell.neighbors.length === 2 || cell.neighbors.length === 3
+cell.isAlive === true && cell.neighbors.length > 3
+cell.isAlive === false && cells.neighbors.length === 3
