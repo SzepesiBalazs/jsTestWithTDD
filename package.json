@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "type": "module",  
     "scripts": {
         "test": "jest",
         "test:cover": "jest --coverage",
@@ -11,9 +12,9 @@
     "author": "SzepesiBalazs szepesi.balazs0924@gmail.com",
     "license": "MIT",
     "devDependencies": {
-        "babel-jest": "24.9.0",
-        "babel-polyfill": "6.26.0",
-        "@babel/preset-env": "7.16.11",
-        "jest": "24.9.0"
+        "babel-jest": "^26.0.0",  
+        "babel-polyfill": "^6.26.0",  
+        "@babel/preset-env": "^7.16.11",
+        "jest": "^26.0.0"  
     }
 }
