@@ -4,6 +4,7 @@ export default class Rules {
         this.cellDiesIfNeighborsAreLessThanTwo(cell)
         this.cellStaysAliveIfHasExactlyTwoNeighbors(cell)
         this.cellDiesIfNeighborsAreMoreThanThree(cell)
+        this.cellBecomesAliveIfHasMoreThanThreeNeighbors(cell)
     }
 
     cellDiesIfNeighborsAreLessThanTwo(cell) {
@@ -13,7 +14,7 @@ export default class Rules {
     }
 
     cellStaysAliveIfHasExactlyTwoNeighbors(cell) {
-        if(cell.isAlive && cell.numberOfAliveNeighbors === 2 || cell.numberOfAliveNeighbors === 3){
+        if(cell.isAlive && (cell.numberOfAliveNeighbors === 2 || cell.numberOfAliveNeighbors === 3)){
             cell.isAlive = true
        }
     }
