@@ -1,6 +1,6 @@
 export default class Cell {
-  constructor(isAlive = true, numberOfLiveNeighbors = 0) {
+  constructor(isAlive = true, numberOfAliveNeighbors = 0) {
     this.isAlive = isAlive;
-    this.numberOfLiveNeighbors = numberOfLiveNeighbors;
+    this.numberOfAliveNeighbors = numberOfAliveNeighbors;
   }
 }

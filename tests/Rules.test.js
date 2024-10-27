@@ -18,4 +18,45 @@ describe("Rules", () => {
 
     expect(cell.isAlive).toBe(false);
   });
-});
+
+  test("should only stay alive when it has exactly 2 neighbors", () => {
+    const rules = new Rules();
+    const cell = new Cell();
+
+    cell.numberOfAliveNeighbors = 2
+    rules.execute(cell);
+
+    expect(cell.isAlive).toBe(true);
+  });
+
+  test("should only stay alive when it has exactly 3 neighbors", () => {
+    const rules = new Rules();
+    const cell = new Cell();
+
+    cell.numberOfAliveNeighbors = 3
+    rules.execute(cell);
+
+    expect(cell.isAlive).toBe(true);
+  });
+
+  test("should live cell die when it has less than 3 neighbors", () => {
+    const rules = new Rules();
+    const cell = new Cell();
+
+    cell.numberOfAliveNeighbors = 4;
+    rules.execute(cell);
+
+    expect(cell.isAlive).toBe(false);
+  });
+
+  test("should dead cell live when it has exactly 3 live neighbors", () => {
+    const rules = new Rules();
+    const cell = new Cell();
+
+    cell.isAlive = false
+    cell.numberOfAliveNeighbors = 3;
+    rules.execute(cell);
+
+    expect(cell.isAlive).toBe(true);
+  });
+}); 
