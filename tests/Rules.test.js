@@ -8,7 +8,7 @@ describe("Rules", () => {
 
     expect(cell.isAlive).toBe(true);
   });
-  
+
   test("should live cell die when it has only 1 live neighbor", () => {
     const rules = new Rules();
     const cell = new Cell();
@@ -23,7 +23,7 @@ describe("Rules", () => {
     const rules = new Rules();
     const cell = new Cell();
 
-    cell.numberOfAliveNeighbors = 2
+    cell.numberOfAliveNeighbors = 2;
     rules.execute(cell);
 
     expect(cell.isAlive).toBe(true);
@@ -33,7 +33,7 @@ describe("Rules", () => {
     const rules = new Rules();
     const cell = new Cell();
 
-    cell.numberOfAliveNeighbors = 3
+    cell.numberOfAliveNeighbors = 3;
     rules.execute(cell);
 
     expect(cell.isAlive).toBe(true);
@@ -53,10 +53,10 @@ describe("Rules", () => {
     const rules = new Rules();
     const cell = new Cell();
 
-    cell.isAlive = false
+    cell.isAlive = false;
     cell.numberOfAliveNeighbors = 3;
     rules.execute(cell);
 
     expect(cell.isAlive).toBe(true);
   });
-}); 
+});
